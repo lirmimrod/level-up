@@ -33,12 +33,9 @@ const SearchBar = () => {
             <button onClick={handleClearClick}>Clear</button>
 
             {shouldDisplayButton? <button onClick={handleSearchClick}>search</button> : null}
-            
-            <ul style={{color:'blue'}}>
-                {
-                    filterArray.map((item,i) => <li key={i} >{item}</li>)
-                }
-            </ul>
+            {shouldDisplayButton ? <ul style={{color:'blue'}}>
+                {filterArray.map((item,i) => <li key={i} >{item}</li>)}
+            </ul> : null}
 
         </div>
     )
